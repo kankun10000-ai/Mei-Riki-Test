@@ -109,7 +109,7 @@ function home(){
     <div class="bar"><i style="width:${(f.ok+q.ok)/(f.n+q.n)*100}%"></i></div></div>`}).join('');
   h=`<div class="card tot"><div><div class="mut">全体の正答率</div><b>${pct(C,T)}</b></div>
   <div style="flex:1"><div class="mut">クリア ${OK} / ${N} 問　解答 ${T} 回</div><div class="bar"><i style="width:${OK/N*100}%"></i></div></div></div>`+rows+
-  `<div class="foot"><button class="btn" id="stat" style="min-height:38px">成績を見る</button><button class="btn" id="reset" style="min-height:38px;border-color:var(--line);color:var(--mut)">記録をリセット</button></div>`;
+  `<div class="foot"><button class="btn" id="stat" style="min-height:38px">成績を見る</button><button class="btn" id="reset" style="min-height:38px;border-color:var(--line);color:var(--mut)">記録をリセット</button></div><div class="mut c" style="flex:none;font-size:10px;line-height:1">ver. 4（田の字・60:40）</div>`;
   app.innerHTML=h;
   app.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{const i=+b.dataset.i,a=b.dataset.a;
     if(a==='sum')summary(i,0);else if(a==='rev')review(i);else run(i,a,null)});
